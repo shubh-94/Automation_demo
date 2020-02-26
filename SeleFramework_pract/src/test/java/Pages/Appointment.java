@@ -63,12 +63,30 @@ public class Appointment extends LoginPage{
 		js.executeScript("window.scrollBy(0,-1500)");
 		Language.click();
 		driver.findElement(By.xpath("//ul[@id='language_options']/li[3]")).click();
-		Calendar.click();
+		
 	}
 	
-	public void Selectdate()
+	public void Selectdate() throws InterruptedException
 	{
+		String month="February 2020";
+		String day="1";
+		Calendar.click();
+		Thread.sleep(2000);
+		while(true)
+		{
+			String text=driver.findElement(By.xpath("//div[@id='startTime_datepopup']/div/div[3]/button")).getText();
+			if(text.equals(month))
+			{
+				break;
+			}
+			else
+			{
+				driver.findElement(By.xpath("//tr[2]/td[2]/span")).click();
+			}
+		}
 		
+		
+				
 	}
 
 }

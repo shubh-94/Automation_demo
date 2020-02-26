@@ -30,7 +30,7 @@ public class Dashboard extends Browserfactory
 		apt.AppointmentDetails();
 		//Thread.sleep(5000);	
 		Helper.captureScreenshot();
-		
+		apt.Selectdate();
 	    //Helper.captureScreenshot();
 	    //Appointment.captureScreenshot();
 
