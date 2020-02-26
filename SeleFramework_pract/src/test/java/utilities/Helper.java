@@ -13,12 +13,8 @@ import org.openqa.selenium.io.FileHandler;
 
 import Pages.LoginPage;
 
-public class Helper extends LoginPage{
+public class Helper extends Browserfactory{
 
-	public Helper(WebDriver ldriver) {
-		super(ldriver);
-		// TODO Auto-generated constructor stub
-	}
 
 	public static String captureScreenshot()
 	{

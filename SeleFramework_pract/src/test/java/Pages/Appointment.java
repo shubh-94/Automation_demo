@@ -31,6 +31,14 @@ public class Appointment extends LoginPage{
 	@FindBy(xpath="//*[@id='container']/div[3]/button[2]") WebElement NextButton1; 
 	@FindBy(xpath="//*[@id='appointmentDetailForm']/div[1]/div/div[1]/span[1]") WebElement Language;
 	@FindBy(xpath="//div[@id='appointmentDetailForm']/div[2]/div/div/span/span[2]") WebElement Calendar;
+	@FindBy(xpath="//div[@id='appointmentDetailForm']/div[2]/div/div/span/span[3]") WebElement AppointmentTime;
+	@FindBy(id="duration") WebElement duration;
+	@FindBy(xpath="//div[@id='appointmentDetailForm']/div[6]/div/div/span") WebElement interpreterRequested;
+	@FindBy(id="meetingPoint") WebElement meetingPoint;
+	@FindBy(xpath="//*[@id='container']/div[3]/button[2]") WebElement nextButton;
+	@FindBy(xpath="//div[@id='patientForm']/div/div[2]/div/div/span/span") WebElement patientIdtype;
+	@FindBy(id="value1") WebElement patientid;
+	@FindBy(xpath="//*[@id='container']/div[3]/button[2]") WebElement submit;
 	
 	public void AppointmentType() throws InterruptedException
 	{
@@ -52,9 +60,12 @@ public class Appointment extends LoginPage{
 		    Facility.click();
 		    Thread.sleep(3000);
 		    driver.findElement(By.xpath("//ul[@id='ddlelement_options']/li")).click();
+		    Thread.sleep(3000);
 		    
 		    js.executeScript("window.scrollBy(0,1500)");
 		    NextButton1.click();
+		    Thread.sleep(3000);
+
 	}	
 	
 	public void AppointmentDetails()
@@ -72,7 +83,7 @@ public class Appointment extends LoginPage{
 		String day="1";
 		Calendar.click();
 		Thread.sleep(2000);
-		while(true)
+		/*while(true)
 		{
 			String text=driver.findElement(By.xpath("//div[@id='startTime_datepopup']/div/div[3]/button")).getText();
 			if(text.equals(month))
@@ -81,12 +92,43 @@ public class Appointment extends LoginPage{
 			}
 			else
 			{
-				driver.findElement(By.xpath("//tr[2]/td[2]/span")).click();
-			}
+		*/		
+		driver.findElement(By.xpath("//tr[5]/td[5]/span")).click();
+		AppointmentTime.click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//ul[@id='startTime_options']/li[18]")).click();
+		duration.sendKeys("30");
+		Thread.sleep(2000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,1500)");
+		Thread.sleep(6000);
+
+		interpreterRequested.click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//ul[@id='interpreter_options']/li[2]")).click(); 		Thread.sleep(2000);
+
+		meetingPoint.sendKeys("ODI-01");
+		
+		nextButton.click();
+		js.executeScript("window.scrollBy(0,-1500)");
+		
+		
 		}
-		
-		
-				
+			
+	public void patient_information() throws InterruptedException
+	{
+		patientIdtype.click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//li[contains(.,'Medicaid')]")).click();
+		patientid.sendKeys("MID_25");
+		Thread.sleep(2000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,1500)");
+		driver.findElement(By.xpath("//*[@id='container']/div[3]/button[2]")).click();
+		js.executeScript("window.scrollBy(0,-1500)");
+		js.executeScript("window.scrollBy(0,1500)");
+		Thread.sleep(2000);
+		submit.click();
+	}
 	}
 
-}

@@ -8,12 +8,12 @@
       <![CDATA[Test startup completed]]>
     </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="61154" started-at="2020-02-25T14:21:30Z" finished-at="2020-02-25T14:22:31Z">
+  <suite name="Suite" duration-ms="108154" started-at="2020-02-26T12:52:17Z" finished-at="2020-02-26T12:54:05Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="61154" started-at="2020-02-25T14:21:30Z" finished-at="2020-02-25T14:22:31Z">
+    <test name="Test" duration-ms="108154" started-at="2020-02-26T12:52:17Z" finished-at="2020-02-26T12:54:05Z">
       <class name="testcases.LoginTestCLink">
-        <test-method status="PASS" signature="setupSuite()[pri:0, instance:testcases.LoginTestCLink@475530b9]" name="setupSuite" is-config="true" duration-ms="858" started-at="2020-02-25T19:51:29Z" finished-at="2020-02-25T19:51:30Z">
+        <test-method status="PASS" signature="setupSuite()[pri:0, instance:testcases.LoginTestCLink@475530b9]" name="setupSuite" is-config="true" duration-ms="972" started-at="2020-02-26T18:22:16Z" finished-at="2020-02-26T18:22:17Z">
           <reporter-output>
             <line>
               <![CDATA[Setting up and starting the test]]>
@@ -23,11 +23,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- setupSuite -->
-        <test-method status="PASS" signature="LogginAppl()[pri:0, instance:testcases.LoginTestCLink@475530b9]" name="LogginAppl" duration-ms="16143" started-at="2020-02-25T19:51:30Z" finished-at="2020-02-25T19:51:46Z">
+        <test-method status="PASS" signature="LogginAppl()[pri:0, instance:testcases.LoginTestCLink@475530b9]" name="LogginAppl" duration-ms="32344" started-at="2020-02-26T18:22:17Z" finished-at="2020-02-26T18:22:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogginAppl -->
-        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:testcases.LoginTestCLink@475530b9]" name="tearDownMethod" is-config="true" duration-ms="1549" started-at="2020-02-25T19:51:46Z" finished-at="2020-02-25T19:51:48Z">
+        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:testcases.LoginTestCLink@475530b9]" name="tearDownMethod" is-config="true" duration-ms="1276" started-at="2020-02-26T18:22:49Z" finished-at="2020-02-26T18:22:50Z">
           <params>
             <param index="0">
               <value>
@@ -40,11 +40,11 @@
         </test-method> <!-- tearDownMethod -->
       </class> <!-- testcases.LoginTestCLink -->
       <class name="testcases.Dashboard">
-        <test-method status="PASS" signature="Appointments()[pri:0, instance:testcases.Dashboard@1d057a39]" name="Appointments" duration-ms="43088" started-at="2020-02-25T19:51:48Z" finished-at="2020-02-25T19:52:31Z">
+        <test-method status="PASS" signature="Appointments()[pri:0, instance:testcases.Dashboard@1d057a39]" name="Appointments" duration-ms="74154" started-at="2020-02-26T18:22:50Z" finished-at="2020-02-26T18:24:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Appointments -->
-        <test-method status="FAIL" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:testcases.Dashboard@1d057a39]" name="tearDownMethod" is-config="true" duration-ms="350" started-at="2020-02-25T19:52:31Z" finished-at="2020-02-25T19:52:31Z">
+        <test-method status="FAIL" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:testcases.Dashboard@1d057a39]" name="tearDownMethod" is-config="true" duration-ms="351" started-at="2020-02-26T18:24:04Z" finished-at="2020-02-26T18:24:05Z">
           <params>
             <param index="0">
               <value>
