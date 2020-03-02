@@ -11,6 +11,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.io.FileHandler;
 
+import Pages.Browserfactory;
 import Pages.LoginPage;
 
 public class Helper extends Browserfactory{

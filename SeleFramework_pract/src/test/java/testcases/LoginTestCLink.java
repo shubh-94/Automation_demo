@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import Pages.Appointment;
 import Pages.Baseclass;
 import Pages.LoginPage;
-import utilities.Browserfactory;
+import Pages.Browserfactory;
 import utilities.ExcelDataProvider;
 import utilities.Helper;
 
@@ -25,6 +25,7 @@ public class LoginTestCLink extends Browserfactory{
 		
 		//System.out.println(driver.getTitle());
 		logger=report.createTest("Login to CLink");
+		logger=report.createTest("Appointment Schedule");
 		System.setProperty("webdriver.chrome.driver","./Drivers/chromedriver.exe");
 		driver= new ChromeDriver();
 		
@@ -38,7 +39,7 @@ public class LoginTestCLink extends Browserfactory{
 		logger.info("Starting Application");
 		page.Loginto(ed.getStringData("Sheet1", 0, 0), ed.getStringData("Sheet1", 0, 1));
 		
-		logger.fail("Login UnSuccess");
+		//logger.fail("Login UnSuccess");
 		 
 
 	}

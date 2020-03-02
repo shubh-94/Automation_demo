@@ -9,10 +9,10 @@ import org.testng.annotations.Test;
 import Pages.Appointment;
 import Pages.Baseclass;
 import Pages.LoginPage;
-import utilities.Browserfactory;
+import Pages.Browserfactory;
 import utilities.Helper;
 
-public class Dashboard extends Browserfactory
+public class Dashboard extends Pages.Browserfactory
 {
 
 	

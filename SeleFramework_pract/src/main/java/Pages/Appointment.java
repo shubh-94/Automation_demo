@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-import utilities.Browserfactory;
+import Pages.Browserfactory;
 
 public class Appointment extends LoginPage{
 		
@@ -53,12 +53,17 @@ public class Appointment extends LoginPage{
 		    Thread.sleep(5000);
 		    js.executeScript("window.scrollBy(0,-1500)");
 		    Region.click();
-		    
-		    Thread.sleep(3000);
-		    driver.findElement(By.xpath("//ul[@id='ddlelement_options']/li")).click();
 		  
+		   
+		    Thread.sleep(3000);
+		    WebElement regionname= driver.findElement(By.xpath("//ul[@id='ddlelement_options']/li"));
+		    regionname.click();
+		    String reg= regionname.getText();
+		    System.out.println("Region is: "+reg);
+		    Thread.sleep(1000);;
 		    Facility.click();
 		    Thread.sleep(3000);
+		    
 		    driver.findElement(By.xpath("//ul[@id='ddlelement_options']/li")).click();
 		    Thread.sleep(3000);
 		    

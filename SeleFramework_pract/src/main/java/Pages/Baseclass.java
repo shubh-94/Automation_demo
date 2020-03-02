@@ -18,7 +18,7 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.MediaEntityModelProvider;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
-import utilities.Browserfactory;
+import Pages.Browserfactory;
 import utilities.ConfigDataProvider;
 import utilities.ExcelDataProvider;
 import utilities.Helper;
